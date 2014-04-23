@@ -1,4 +1,4 @@
-Checkers
+---
 ========
 
-Checkers program
+---

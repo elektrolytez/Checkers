@@ -5,7 +5,7 @@ A Horse Power Program to evaluate horse power.
 
 ***--- todo 4/23/14 ---***
 
-* implement min max 
+* implement min max -focus-
 * research alpha beta pruning
 * implement heuristic evaluation function -focus-
 * research and implement learning

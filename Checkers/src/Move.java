@@ -80,15 +80,4 @@ public class Move {
                 }
         }
         
-        /**
-         * Simply calls getMessage() which converts the board move into
-         * a string representation of the move. Possibly redundant.
-         * @return the String representation of the move made
-         */
-        @Override
-        public String toString(){
-                return getMessage();
-        }
-        
-        
 }

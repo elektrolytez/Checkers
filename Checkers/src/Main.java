@@ -93,7 +93,7 @@ public class Main {
 			while(!terminal(readMessage)) {
 					//make a random legal move until we implement minimax
 					List<Move> actions = _board.actions();
-					Move action = actions.get((int)Math.random() * actions.size());
+					Move action = actions.get((int)(Math.random() * actions.size()));
 					myClient.writeMessageAndEcho(action.getMessage());// send the move to the server
 					readMessage = myClient.readAndEcho();  //show the move received by the server
 					_board = _board.result(action); //write the move to the board
@@ -106,7 +106,10 @@ public class Main {
 					System.out.println(_board.toString()); //show the move
 					readMessage = myClient.readAndEcho();  // move query
 				}
-
+			if (readMessage.contains(myClient.getColor()))
+				System.out.println("YOU WIN!!!");
+			else if (!readMessage.contains("Draw"))
+				System.out.println("You lose");
 			myClient.getSocket().close();
 		} catch  (IOException e) {
 			System.out.println("Failed in read/close");
